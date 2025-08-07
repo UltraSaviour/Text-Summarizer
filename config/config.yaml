@@ -1,0 +1,8 @@
+artifacts_root: artifacts
+
+# Data ingestion configuration for Kaggle dataset
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: "https://drive.usercontent.google.com/download?id=1KMAPoRUZxZ6M9s7LtbMWPNlA9IkHbOw7&export=download&authuser=0&confirm=t&uuid=a87ab42b-fff6-4ff1-9466-f5d3bb967a39&at=AN8xHordnvJUxzmDSxoECllXMYOK%3A1754569177158"
+  local_data_file: artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail.zip
+  unzip_dir: artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail

@@ -1,0 +1,378 @@
+[2025-08-07 10:43:55,964]: INFO: main: Welcome to the Text Summarizer Project:
+[2025-08-07 11:44:01,296: INFO: main: Welcome to the Text Summarizer Project]
+[2025-08-07 11:56:48,725: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 11:56:48,728: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 11:56:48,729: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 11:56:48,729: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "/home/prateek/text_summariser/src/text_summarizer/utils/common.py", line 28, in read_yaml
+    return ConfigBox(content)
+  File "box/box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_01_data_ingestion.py", line 11, in main
+    config = ConfigurationManager()
+  File "/home/prateek/text_summariser/src/text_summarizer/config/configuration.py", line 17, in __init__
+    self.params = read_yaml(params_filepath)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/prateek/text_summariser/src/text_summarizer/utils/common.py", line 30, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2025-08-07 11:58:27,022: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 11:58:27,024: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 11:58:27,024: ERROR: main: expected '<document start>', but found '<scalar>'
+  in "params.yaml", line 1, column 6]
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_01_data_ingestion.py", line 11, in main
+    config = ConfigurationManager()
+  File "/home/prateek/text_summariser/src/text_summarizer/config/configuration.py", line 17, in __init__
+    self.params = read_yaml(params_filepath)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/prateek/text_summariser/src/text_summarizer/utils/common.py", line 32, in read_yaml
+    raise e
+  File "/home/prateek/text_summariser/src/text_summarizer/utils/common.py", line 26, in read_yaml
+    content = yaml.safe_load(yaml_file)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/yaml/composer.py", line 39, in get_single_node
+    if not self.check_event(StreamEndEvent):
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/yaml/parser.py", line 171, in parse_document_start
+    raise ParserError(None, None,
+yaml.parser.ParserError: expected '<document start>', but found '<scalar>'
+  in "params.yaml", line 1, column 6
+[2025-08-07 11:59:10,408: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 11:59:10,409: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 11:59:10,409: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 11:59:10,409: ERROR: main: "'ConfigBox' object has no attribute 'artifacts_root'"]
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_01_data_ingestion.py", line 11, in main
+    config = ConfigurationManager()
+  File "/home/prateek/text_summariser/src/text_summarizer/config/configuration.py", line 19, in __init__
+    create_directories([self.config.artifacts_root])
+  File "box/config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifacts_root'"
+[2025-08-07 11:59:54,401: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 11:59:54,402: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 11:59:54,403: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 11:59:54,403: ERROR: main: "'ConfigBox' object has no attribute 'artifacts_root'"]
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_01_data_ingestion.py", line 11, in main
+    config = ConfigurationManager()
+  File "/home/prateek/text_summariser/src/text_summarizer/config/configuration.py", line 19, in __init__
+    create_directories([self.config.artifacts_root])
+  File "box/config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifacts_root'"
+[2025-08-07 12:00:46,234: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 12:00:46,234: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 12:00:46,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 12:00:46,235: INFO: common: created directory at: artifacts]
+[2025-08-07 12:00:46,235: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 12:00:46,236: ERROR: main: unknown url type: 'gowrishankarp/newspaper-text-summarization-cnn-dailymail']
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/urllib/request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/urllib/request.py", line 509, in open
+    req = Request(fullurl, data)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/urllib/request.py", line 328, in __init__
+    self.full_url = url
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/urllib/request.py", line 354, in full_url
+    self._parse()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/urllib/request.py", line 383, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: 'gowrishankarp/newspaper-text-summarization-cnn-dailymail'
+[2025-08-07 12:15:09,156: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 12:15:09,157: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 12:15:09,157: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 12:15:09,157: INFO: common: created directory at: artifacts]
+[2025-08-07 12:15:09,157: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 12:15:09,886: INFO: data_ingestion: artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail.zip download! with following info: 
+Content-Type: text/html; charset=utf-8
+X-Robots-Tag: noindex, nofollow, nosnippet
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Thu, 07 Aug 2025 12:15:09 GMT
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Content-Security-Policy: require-trusted-types-for 'script';report-uri https://csp.withgoogle.com/csp/docs-tt
+Reporting-Endpoints: default="/file/d/1KMAPoRUZxZ6M9s7LtbMWPNlA9IkHbOw7/web-reports?bl=apps-fileview.texmex_20250730.11_p1&app=15&clss=1&context=eJwV0XtYzXccB_Djd77ft-h2OspOcU6njnRaooxHq-hyWFkuM5ejxxSmXEZrY6khJmxYe2yzsblUTll1KtJsUhiieETaTWF71tzWBbM20aa9_fF6nvfneb__-_QvcM11sKrKHK2qACeryqaxqlbrrKrDQ62qjwKsqt7nraq-gVZVYJBVlR1sVYXmWFVxlLhwtir1mefblXSa3vpQmUMT4_9SplHN-r-VWqp872-lmvLfeKQUU35Et1JMO8Z2K3uof0q3oqXft3Yr7ZR-4bGSRf7aJ8oIas17orTRpd6nyk9k1PcqZnLI7FU0dNPWR91BA88qagP9_qpa3U6r31Ors2nfZrX6AO2_pVaX0Ll-Qn2JVPfDhAP90hUubtPWnRHiE7J5jRV2SgsdKzLo1EeR4jx1WKNEF62MixZrKCg-Woym49nRooECPo8WL1JPZ7RQ3-PGHiM2UkBZjAih5WkW8Q7VpVvEZarKtIjzdGWNRTTT4YMWcYycKy3CgzYdsYgccvEdLwbS5cAJ4mfSLJ0gdLTlrQniY4o7MUG8Qg517J65w54SF74kUsm-IlZU08HsWHGSsgdMFNvI3PdlEUzbpufKT2nt4ly5ifZ8mysLyDgzTwbTF115Mp-mavfLJLKN2S8rqWjKfnmIdO42aaZFnja5io6dsckL5FlrkwHkdp2ZZt63ybk0JrFAxpLjkgI5gJqWFcgWyrpZIDfT0tcL5bs0o6JQvkbq4wekIx3f-JU8S0HeRXI0fZhQJHdQTUeRvEjOO0ukB7X8USJb6c__SuRjuj_MLh9RwhS7nE9rF9rlJtJm2aUXTSy2y2n0aEup7KU_ckrlY0oKLJOL6HxKmWymHU_LZAFpXimXRmpaUC5bKD21XGZRw5vl8qeyNvkL1TS2yVqyz22XlfR6brtcQQ_q22U3dY3rkP_SztMdMpe-_7JTXqOIaQ_leFLp_5IaqrE54iJpTzgirsURkynhiSMSyb7bCYeoYY8Tmqij1gldlHvTCV9RraszLlLmcmdsobCjzoihbe3O2E7GDS4wU_hZF1ioIcUVTfTjPlfcoLW3XFFSqMFhCu_WIIo8ejTwo7Y5bnhIqVluyKLqw244Q9XBWpyhC-FaXKZ-L2nhQvY1WhyijKABWE_JLe54h1qvu6ONNne6Yxs1ZnrgKrm-74Hn6HSNB-ro7g8D8YBWXR-IdZS67DmkU4VRhyry9tVhBGXE67Ce3FJ08KS-u3RwovoyHRrp5nkdOmhqpCeSqD7PE400yeaJGVS51QvVVPHIC1U0bOkgjKK3Ng9COs3ePgjz6OC6wfiaKjcMxlE6VzUYl2idosdGKjPocZz2zNKjlP6p0KOHcq7o8Rnl3tKjgFJcDHiD4k0GTKepQwyYQavTDcimyaUGRNw3YDxdNXjjBtWZvPEzvTvJGxsoO8UbH9DQI94YTj0wQt3XiMhQI2KpOtaIM9RvqRFKlRH96e4lIzppV54P9lLeAR8UUmiRD-LIYYQvNHQ6zBdN1LzSF79R7FNfTCVNpAk6mn_AhBTSF5ngR9__YMI1CusxIZJGJA7B7S-H4B69-eMQrHwm0Q-Z9EWaH_Jp2Nt-GEWr1P64keCPW-S8yR9uzf7wpMFuZvhQ1VwzTtF3eWb-zYx7hWb8Q-W3zfiGzK4BCKJgTQBCye4egEraPjsMn9ELIhzhlL8rHMU0qDQcJhqqi0AgucRFYADNy4rAYmqmX6m1LgJ36O7useikO2vHoYPqPxmHRoq_Og7TqU9IJECTh0Zh7jN7o7CADtLXdJYu0LriKGykfn7RcKOED6Ixn4btjcYo-rc7Bn0ex6C9yoIHdPKaBbWkdXJoqGiqhWa7rb5e8RKzliSv8jXNT0tbEZSyZFlyOs_hK5MzlidnJI0MHjk6eMwLwcNDQpLSQv4HcpStmQ&build-label=apps-fileview.texmex_20250730.11_p1&imp-sid=CLam3sTW-I4DFSugCggdbA4ZtA&is-cached-offline=false"
+Document-Policy: include-js-call-stacks-in-crash-reports
+Referrer-Policy: origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Server: GSE
+Set-Cookie: NID=525=b7SBjNzlQOc-dSM00Qd0LOQ1CnbsqpVvhd4sm8nG4vqqweofvzoBV8ceqoCAvntQcq7m8re5ti9LyFXiViA9SEGqUUYAeJGosprA4P5PCYWj5h4ETaZquEe5fMQ2gsMSOf4FrqAypjBeCGwY0X7so9TwGaiG7w5l-HfFxR-Tluw9PXSgW6v5sZv_F3STibeVYQ; expires=Fri, 06-Feb-2026 12:15:09 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Accept-Ranges: none
+Vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site,Accept-Encoding
+Connection: close
+Transfer-Encoding: chunked
+
+]
+[2025-08-07 12:15:09,886: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.extract_zip_file()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/zipfile.py", line 1271, in __init__
+    self._RealGetContents()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/zipfile.py", line 1338, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-08-07 12:18:37,179: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 12:18:37,179: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 12:18:37,180: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 12:18:37,180: INFO: common: created directory at: artifacts]
+[2025-08-07 12:18:37,180: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 12:18:37,834: INFO: data_ingestion: artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail.zip download! with following info: 
+Content-Type: text/html; charset=utf-8
+X-Robots-Tag: noindex, nofollow, nosnippet
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Thu, 07 Aug 2025 12:18:38 GMT
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Content-Security-Policy: require-trusted-types-for 'script';report-uri https://csp.withgoogle.com/csp/docs-tt
+Reporting-Endpoints: default="/file/d/1KMAPoRUZxZ6M9s7LtbMWPNlA9IkHbOw7/web-reports?bl=apps-fileview.texmex_20250730.11_p1&app=15&clss=1&context=eJwV0XtYzXccB_Djd77ft-h2OopT6nSUdJKo4dG66HJQ1tzGHD0mjDJGMqRQLrkMY7bZ2Fwqp6w6lUtsWjUbkTwurW1GLs-WexeMNpFpb3-8ns_zeb8__326Fztm25hVJbZmlZ-dWWXRmFUrdGbVkX5m1TY_s6qzv1nV1d-s8g8wq7ICzargrWZVLCXMnqJKfq1_s5JKExufKFNpdNxTZQJVrv5HqaayNf8oFZT74TOlkHLD2pVC2hHeruyh7kntipZubW5Xmin13HMlk3y1L5RB1JjzQmmii52vlMtk8OhUjGST3qlo6Lali7qFep5W1Hq69Y5a3Uwr1qjVWbRvg1p9gPbfUauL6Ew3ob5IqkchwoZutoWKu7R5Z5j4nCxu4cJKKcHhIo1-3hYhaqnFHCnaaElslFhJAXFRYihVZUWJC-T3VZR4kzpao4T6IW-s0WId-ZVEiyBakGISS6km1SQuUXm6SdTSLytN4iodOWgSP5B9mUm40PpjJrGVHLxGiJ50yX-k-IM080YKHW1aNFJ8RrE_jhTjyaaG3Wv32FPC7FEimayLY0QFHcyKEScoq8dosYWMXd8SgbRlYrb8gjZ-kC0_pT3fZ8s8MrybIwPp67YcmUvjtPvldLIM2y_LqGDsfnmIdM4WaaQ5rha5jH44ZZHnyLXaIv3o0zMWuZOcrjOjdx9Z5DQalpAnY8h2bp7sQfXz82QDZd7Okxto3qx8uZwmHc6X75G66oC0pap138rTFOBZIIfSJ_EFcgdVthTI82S_s0i6UMODItlIT5uKZAf9_V-RfE6PBljlM4ofa5UzKWO2Va4nbaZVutHoQqucQM82FctOerC1WD6n6f4lcg7VJpXIq7TjVYnMI834Ummg-vdLZQOlJpfKTLqwsFReLmmSN6myrklWk3VasyyjWdnNcjE9Ptss26lteIt8STtPtshs-vWbVnmNwiY8kSNI5fFUaqjSYovzpP3RFrENthhD8S9skUDW3XY4RBf22KGeWqrt0EbZt-3wLVU72uM8pS-wxyYKOW6PaNrSbI_tZFjrACOFnnaAiS4kOaKeft_niBuUcccRRfkaHKHQdg0iyaVDAx9qmuqEJ5Sc6YRMqjjihFNUEajFKaoO1aKWuo3SwoGsK7U4RGkBPbCaEhucsZQarzujiTa0OmML1aW74Ao5bnRBLzpZ6YIauv9bTzymZdd7YhUlz--FVDps0KGcPL10GERpcTqsJqckHVyp6y4d7OhsiQ51dLtWhxYaG-GKBDqb44o6etviiklUttkNFXT4mRvKacC83hhCizb0RipN2d4bM-jgKnccpbK17jhOZ8rdcZFWKR5YRyV6D1TRnskeKKZ_D3ugg7b-4oEvKfuOB_IoyUGPDynOW4-JNK6vHpNoRaoeWTSmWI-wR3qMoCt6T9ygGm9P_EHL3_bEWspI4qR-xzwxkDpggLqrARHBBsRQt3kGKOUGdKf7Fw1opV05fbCXcg70QT4FF_RBLNkM8oKGToZ4oZ6uLvHCXxTzygvjSBPhDR3NPOCNJPr1N29co5AOb0TQoIS-uPtNXzykhb_3xZLXEnyQTl-n-CCXBnzkgyG0TO2LG_G-uEP2633hdNUXruTuZEQfKp9mxM_0U46RfzLiYb4R_1LpXSO-I6OjHwIoUOOHYLI6-6GMtk8JwZc0WIQilHJ3haKQeheHwpv66cLgTw6xYehBMzLD8AH9SXepsSYM9yhDFY71dH93OFrpXsZwtNDZz4ejjuKuDMdE6hIUAdCYfpGY9treSLxPB-konaZztKowEuuom08UnCj-4yjMpAF7ozCEXrZHo8vzaDSXm_CYTlwzoZq0tjb7yuqroTlUVe7uJibPTVzm5T0zJWVxQNLc-YmpXAcuSUxbkJg2_Y3AN4YGDhscODAoaHpK0P_VzrNm&build-label=apps-fileview.texmex_20250730.11_p1&imp-sid=CLafjKjX-I4DFSugCggdbA4ZtA&is-cached-offline=false"
+Document-Policy: include-js-call-stacks-in-crash-reports
+Referrer-Policy: origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Server: GSE
+Set-Cookie: NID=525=WUsYhSrFngz4CIwLwSS-E1pS-QUP2XPhT9bl6UDqrkwhfztupDmtTCCz4TSrtyGADvF141PlXJoQO-UrF_xh31xkfLyYRhea3FjVRVrtN7OA-vF3vFl-WY5RLrSx2_hbaAqBiGYQcO_nqcD_e_WarEiy5TUiNSEh9QqU0b2D089zPZPbbXC7IUMrBWSLnTrx; expires=Fri, 06-Feb-2026 12:18:37 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Accept-Ranges: none
+Vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site,Accept-Encoding
+Connection: close
+Transfer-Encoding: chunked
+
+]
+[2025-08-07 12:18:37,834: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.extract_zip_file()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/zipfile.py", line 1271, in __init__
+    self._RealGetContents()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/zipfile.py", line 1338, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-08-07 12:20:23,745: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 12:20:23,745: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 12:20:23,746: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 12:20:23,746: INFO: common: created directory at: artifacts]
+[2025-08-07 12:20:23,746: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 12:20:24,367: INFO: data_ingestion: artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail.zip download! with following info: 
+Content-Type: text/html; charset=utf-8
+X-GUploader-UploadID: ABgVH89g5kjvR1ehUiZAYwaqwjOOt4B8j06s-oX6nkpxAjF6U-_rpVi9jh_7Qq_D3vOQDZ_mdACh-mk
+Vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-downloads
+Content-Security-Policy: script-src 'report-sample' 'nonce-ptirhhz1b6Kn03bDcyHEnQ' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/DriveUntrustedContentHttp/cspreport;worker-src 'self'
+Content-Security-Policy: require-trusted-types-for 'script';report-uri /_/DriveUntrustedContentHttp/cspreport
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Thu, 07 Aug 2025 12:20:24 GMT
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Cross-Origin-Opener-Policy: same-origin
+Accept-CH: Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version
+Cross-Origin-Resource-Policy: same-site
+Permissions-Policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*
+reporting-endpoints: default="/_/DriveUntrustedContentHttp/web-reports?context=eJzj0tDikmLw1ZBi6PHYxTQBiKNWXGONA-L8mtusRUC8wuMO61ogFuLh6Nhy6QibwIkFDzYxK6km5RfGpxRllqVmlJQUJBZkFqcWlaUWxRsZGJkamBsb6hkYxRcYAABjiCJS"
+Content-Length: 2470
+Server: UploadServer
+Set-Cookie: NID=525=Zk0_yQLpxyuFrZHK0axPZHiJortCDl5b-EZrl4sVjAiqrxTC6HYZGoUs_jGunVqO7mTb1mDOHciwMbS8CwE725AYPJYGICkXZyO_LvOfCa_9oyXIp2Z21krlqlNSimszTB4-pvODjaPsy7U2dC9ny6ZIIYa6Tq-Ez-ZkfYb0QpLe8-uA4ruUcLSRu_MurMrH; expires=Fri, 06-Feb-2026 12:20:24 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Connection: close
+
+]
+[2025-08-07 12:20:24,367: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.extract_zip_file()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/zipfile.py", line 1271, in __init__
+    self._RealGetContents()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/zipfile.py", line 1338, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-08-07 12:21:09,445: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 12:21:09,446: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 12:21:09,446: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 12:21:09,447: INFO: common: created directory at: artifacts]
+[2025-08-07 12:21:09,447: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 12:24:24,340: INFO: data_ingestion: artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail.zip download! with following info: 
+Content-Type: application/octet-stream
+X-GUploader-UploadID: ABgVH88BkCugE6aotQjuXyrBD7T-AYkuTvDF83jDZNzGMjFDQVkbZ2MAhkQKq8vvMfJxD_Fo6dOGcNo
+Content-Security-Policy: sandbox
+Content-Security-Policy: default-src 'none'
+Content-Security-Policy: frame-ancestors 'none'
+X-Content-Security-Policy: sandbox
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Resource-Policy: same-site
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment; filename="archive.zip"
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: false
+Access-Control-Allow-Headers: Accept, Accept-Language, Authorization, Cache-Control, Content-Disposition, Content-Encoding, Content-Language, Content-Length, Content-MD5, Content-Range, Content-Type, Date, developer-token, financial-institution-id, X-Goog-Sn-Metadata, X-Goog-Sn-PatientId, GData-Version, google-cloud-resource-prefix, linked-customer-id, login-customer-id, x-goog-request-params, Host, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, OriginToken, Pragma, Range, request-id, Slug, Transfer-Encoding, User-Agent, hotrod-board-name, hotrod-chrome-cpu-model, hotrod-chrome-processors, Want-Digest, X-Ad-Manager-Impersonation, x-chrome-connected, X-ClientDetails, X-Client-Pctx, X-Client-Version, x-debug-settings-metadata, X-Firebase-AppId, X-Firebase-AppVersion, X-Firebase-Locale, X-Goog-Firebase-Installations-Auth, X-Firebase-Client, X-Firebase-Client-Log-Type, X-Firebase-GMPID, X-Firebase-Auth-Token, X-Firebase-AppCheck, X-Firebase-Token, X-Goog-Drive-Client-Version, X-Goog-Drive-Resource-Keys, X-GData-Client, X-GData-Key, X-GoogApps-Allowed-Domains, X-Goog-AdX-Buyer-Impersonation, X-Goog-Api-Client, X-Goog-Visibilities, X-Goog-AuthUser, X-Google-EOM, x-goog-ext-124712974-jspb, x-goog-ext-467253834-jspb, x-goog-ext-353267353-bin, x-goog-ext-353267353-jspb, x-goog-ext-251363160-jspb, x-goog-ext-259736195-jspb, x-goog-ext-477772811-jspb, x-goog-ext-359275022-bin, x-goog-ext-328800237-jspb, x-goog-ext-198889211-bin, x-goog-ext-202735639-bin, x-goog-ext-223261916-bin, x-goog-ext-223435598-bin, x-goog-ext-233818517-bin, x-goog-ext-202964622-bin, X-Goog-PageId, X-Goog-Encode-Response-If-Executable, X-Goog-Correlation-Id, X-Goog-Request-Info, X-Goog-Request-Reason, X-Goog-Request-Time, X-Goog-Experiments, x-goog-iam-authority-selector, x-goog-iam-authorization-token, X-Goog-Spatula, X-Goog-Travel-Bgr, X-Goog-Travel-Settings, X-Goog-Upload-Command, X-Goog-Upload-Content-Disposition, X-Goog-Upload-Content-Length, X-Goog-Upload-Content-Type, X-Goog-Upload-File-Name, X-Goog-Upload-Header-Content-Encoding, X-Goog-Upload-Header-Content-Length, X-Goog-Upload-Header-Content-Type, X-Goog-Upload-Header-Transfer-Encoding, X-Goog-Upload-Offset, X-Goog-Upload-Protocol, x-goog-user-project, X-Goog-Visitor-Id, X-Goog-FieldMask, X-Google-Project-Override, x-goog-maps-api-salt, x-goog-maps-api-signature, x-goog-maps-client-id, X-Goog-Api-Key, x-goog-spanner-database-role, X-HTTP-Method-Override, X-JavaScript-User-Agent, X-Pan-Versionid, X-Proxied-User-IP, X-Origin, X-Referer, X-Requested-With, X-Stadia-Client-Context, X-Upload-Content-Length, X-Upload-Content-Type, X-Use-Alt-Service, X-Use-HTTP-Status-Code-Override, X-Ios-Bundle-Identifier, X-Places-Ios-Sdk, X-Android-Package, X-Android-Cert, X-Places-Android-Sdk, X-Goog-Maps-Ios-Uuid, X-Goog-Maps-Android-Uuid, X-Ariane-Xsrf-Token, X-YouTube-Bootstrap-Logged-In, X-Youtube-Client-Name, X-Youtube-Client-Version, X-YouTube-Lava-Device-Context, X-YouTube-VVT, X-YouTube-Page-CL, X-YouTube-Page-Label, X-YouTube-Page-Timestamp, X-Compass-Routing-Destination, x-framework-xsrf-token, X-Goog-Meeting-ABR, X-Goog-Meeting-Botguardid, X-Goog-Meeting-Bot-Info, X-Goog-Meeting-ClientInfo, X-Goog-Meeting-ClientVersion, X-Goog-Meeting-Debugid, X-Goog-Meeting-Identifier, X-Goog-Meeting-Interop-Cohorts, X-Goog-Meeting-Interop-Type, X-Goog-Meeting-OidcIdToken, X-Goog-Meeting-RtcClient, X-Goog-Meeting-StartSource, X-Goog-Meeting-Token, X-Goog-Meeting-Viewer-Token, X-Client-Data, x-sdm-id-token, X-Sfdc-Authorization, MIME-Version, Content-Transfer-Encoding, X-Earth-Engine-App-ID-Token, X-Earth-Engine-Computation-Profile, X-Earth-Engine-Computation-Profiling, X-Play-Console-Experiments-Override, X-Play-Console-Session-Id, x-alkali-account-key, x-alkali-application-key, x-alkali-auth-apps-namespace, x-alkali-auth-entities-namespace, x-alkali-auth-entity, x-alkali-client-locale, EES-S7E-MODE, cast-device-capabilities, X-Server-Timeout, x-foyer-client-environment, x-goog-greenenergyuserappservice-metadata, x-goog-sherlog-context, X-Server-Token, x-rfui-request-context, x-goog-nest-jwt, X-Cloud-Trace-Context, traceparent, x-goog-chat-space-id, x-goog-pan-request-context, X-AppInt-Credentials
+Access-Control-Allow-Methods: GET,HEAD,OPTIONS
+Accept-Ranges: bytes
+Content-Length: 527738644
+Last-Modified: Thu, 07 Aug 2025 12:14:23 GMT
+Date: Thu, 07 Aug 2025 12:21:11 GMT
+Expires: Thu, 07 Aug 2025 12:21:11 GMT
+Cache-Control: private, max-age=0
+X-Goog-Hash: crc32c=szy+HQ==
+Server: UploadServer
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Connection: close
+
+]
+[2025-08-07 12:24:31,786: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-07 12:43:49,698: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 12:43:49,700: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 12:43:49,702: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 12:43:49,702: INFO: common: created directory at: artifacts]
+[2025-08-07 12:43:49,702: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 12:43:49,702: INFO: data_ingestion: File already exists of size: ~ 515370 KB]
+[2025-08-07 12:43:57,230: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-07 12:43:57,231: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-07 12:43:57,231: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-07 12:43:57,231: INFO: common: created directory at: artifacts]
+[2025-08-07 12:43:57,231: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 12:43:57,231: INFO: data_ingestion: File already exists of size: ~ 515370 KB]
+[2025-08-07 12:44:14,417: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
