@@ -601,3 +601,482 @@ NameError: name 'ModelTrainerTrainingPipeline' is not defined
 [2025-08-08 06:54:01,731: INFO: common: yaml file: params.yaml loaded successfully]
 [2025-08-08 06:54:01,731: INFO: common: created directory at: artifacts]
 [2025-08-08 06:54:01,732: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:02:38,668: ERROR: main: Directory artifacts/data_transformation/newspaper-text-summarization-cnn-dailymail not found]
+Traceback (most recent call last):
+  File "main.py", line 46, in <module>
+    model_trainer.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/model_trainer.py", line 23, in train
+    dataset_samsum_pt = load_from_disk(self.config.data_path)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/datasets/load.py", line 2210, in load_from_disk
+    raise FileNotFoundError(f"Directory {dataset_path} not found")
+FileNotFoundError: Directory artifacts/data_transformation/newspaper-text-summarization-cnn-dailymail not found
+[2025-08-08 07:04:08,396: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:04:09,570: INFO: main: *******************]
+[2025-08-08 07:04:09,570: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:04:09,573: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:04:09,575: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:04:09,575: INFO: common: created directory at: artifacts]
+[2025-08-08 07:04:09,575: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:04:18,058: ERROR: main: Directory artifacts/data_transformation/newspaper-text-summarization-cnn-dailymail not found]
+Traceback (most recent call last):
+  File "main.py", line 46, in <module>
+    model_trainer.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/model_trainer.py", line 23, in train
+    newspaper_text_summarizer_pt = load_from_disk(self.config.data_path)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/datasets/load.py", line 2210, in load_from_disk
+    raise FileNotFoundError(f"Directory {dataset_path} not found")
+FileNotFoundError: Directory artifacts/data_transformation/newspaper-text-summarization-cnn-dailymail not found
+[2025-08-08 07:15:36,393: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:15:37,426: INFO: main: *******************]
+[2025-08-08 07:15:37,426: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:15:37,429: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:15:37,430: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:15:37,430: INFO: common: created directory at: artifacts]
+[2025-08-08 07:15:37,430: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:15:37,628: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:15:37,628: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:15:38,574: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:15:44,499: INFO: model_trainer: Loading dataset from artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 07:15:45,104: INFO: model_trainer: Dataset loaded successfully. Available splits: ['train', 'test', 'validation']]
+[2025-08-08 07:15:45,117: INFO: model_trainer: Train sample keys: ['id', 'article', 'highlights', 'input_ids', 'attention_mask', 'labels']]
+[2025-08-08 07:15:45,117: INFO: model_trainer: Input IDs length: 237]
+[2025-08-08 07:15:45,117: INFO: model_trainer: Labels length: 45]
+[2025-08-08 07:15:45,120: ERROR: main: __init__() got an unexpected keyword argument 'predict_with_generate']
+Traceback (most recent call last):
+  File "main.py", line 46, in <module>
+    model_trainer.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/model_trainer.py", line 49, in train
+    trainer_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'predict_with_generate'
+[2025-08-08 07:16:18,343: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:16:18,596: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:16:18,598: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:16:18,599: INFO: common: created directory at: artifacts]
+[2025-08-08 07:16:18,600: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:16:35,080: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:16:35,867: INFO: main: *******************]
+[2025-08-08 07:16:35,867: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:16:35,869: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:16:35,870: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:16:35,870: INFO: common: created directory at: artifacts]
+[2025-08-08 07:16:35,871: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:16:36,068: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:16:36,068: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:16:38,241: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:30:16,790: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:30:17,064: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:30:17,067: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:30:17,068: INFO: common: created directory at: artifacts]
+[2025-08-08 07:30:17,068: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:31:00,404: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:31:00,671: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:31:00,674: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:31:00,675: INFO: common: created directory at: artifacts]
+[2025-08-08 07:31:00,675: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:31:25,031: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:31:25,802: INFO: main: *******************]
+[2025-08-08 07:31:25,802: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:31:25,804: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:31:25,805: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:31:25,806: INFO: common: created directory at: artifacts]
+[2025-08-08 07:31:25,806: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:31:26,319: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:31:26,319: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:31:27,336: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:31:27,674: ERROR: model_trainer: Error loading model: Using `low_cpu_mem_usage=True` or a `device_map` requires Accelerate: `pip install 'accelerate>=0.26.0'`]
+[2025-08-08 07:34:17,543: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:34:18,870: INFO: main: *******************]
+[2025-08-08 07:34:18,870: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:34:18,872: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:34:18,875: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:34:18,875: INFO: common: created directory at: artifacts]
+[2025-08-08 07:34:18,875: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:34:19,141: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:34:19,141: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:34:20,140: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:34:29,303: ERROR: model_trainer: Error loading model: Cannot copy out of meta tensor; no data!]
+[2025-08-08 07:35:37,578: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:35:38,787: INFO: main: *******************]
+[2025-08-08 07:35:38,787: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:35:38,789: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:35:38,792: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:35:38,792: INFO: common: created directory at: artifacts]
+[2025-08-08 07:35:38,792: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:35:39,008: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:35:39,008: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:35:39,955: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:35:48,126: ERROR: model_trainer: Error loading model: Cannot copy out of meta tensor; no data!]
+[2025-08-08 07:41:01,673: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:41:03,041: INFO: main: *******************]
+[2025-08-08 07:41:03,042: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:41:03,045: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:41:03,049: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:41:03,049: INFO: common: created directory at: artifacts]
+[2025-08-08 07:41:03,050: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:41:03,339: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:41:03,339: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:41:04,392: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:41:04,392: INFO: model_trainer: Attempting loading strategy 1...]
+[2025-08-08 07:41:10,725: INFO: model_trainer: Successfully loaded model using strategy 1]
+[2025-08-08 07:41:11,733: INFO: model_trainer: Loading dataset from artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 07:41:12,242: INFO: model_trainer: Dataset loaded successfully. Available splits: ['train', 'test', 'validation']]
+[2025-08-08 07:41:12,248: INFO: model_trainer: Train sample keys: ['id', 'article', 'highlights', 'input_ids', 'attention_mask', 'labels']]
+[2025-08-08 07:41:12,248: INFO: model_trainer: Input IDs length: 237]
+[2025-08-08 07:41:12,248: INFO: model_trainer: Labels length: 45]
+[2025-08-08 07:41:12,248: ERROR: main: __init__() got an unexpected keyword argument 'predict_with_generate']
+Traceback (most recent call last):
+  File "main.py", line 46, in <module>
+    model_trainer.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/model_trainer.py", line 101, in train
+    trainer_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'predict_with_generate'
+[2025-08-08 07:50:31,386: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:50:32,183: INFO: main: *******************]
+[2025-08-08 07:50:32,183: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:50:32,185: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:50:32,187: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:50:32,187: INFO: common: created directory at: artifacts]
+[2025-08-08 07:50:32,187: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:50:32,349: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:50:32,349: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:50:33,280: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:50:42,406: INFO: model_trainer: Loading dataset from artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 07:50:42,889: INFO: model_trainer: Dataset loaded successfully. Available splits: ['train', 'test', 'validation']]
+[2025-08-08 07:50:42,897: INFO: model_trainer: Train sample keys: ['id', 'article', 'highlights', 'input_ids', 'attention_mask', 'labels']]
+[2025-08-08 07:50:42,898: INFO: model_trainer: Input IDs length: 237]
+[2025-08-08 07:50:42,898: INFO: model_trainer: Labels length: 45]
+[2025-08-08 07:50:43,305: INFO: model_trainer: Starting training...]
+[2025-08-08 07:50:43,450: ERROR: main: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`id` in this case) have excessive nesting (inputs type `list` where type `int` is expected).]
+Traceback (most recent call last):
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 776, in convert_to_tensors
+    tensor = as_tensor(value)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 738, in as_tensor
+    return torch.tensor(value)
+ValueError: too many dimensions 'str'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 46, in <module>
+    model_trainer.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/model_trainer.py", line 76, in train
+    trainer.train()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 2123, in train
+    return inner_training_loop(
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 2427, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 5045, in get_batch_samples
+    batch_samples += [next(epoch_iterator)]
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/accelerate/data_loader.py", line 550, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/data/data_collator.py", line 599, in __call__
+    batch = pad_without_fast_tokenizer_warning(
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/data/data_collator.py", line 66, in pad_without_fast_tokenizer_warning
+    padded = tokenizer.pad(*pad_args, **pad_kwargs)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 3541, in pad
+    return BatchEncoding(batch_outputs, tensor_type=return_tensors)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 240, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type, prepend_batch_axis=prepend_batch_axis)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 792, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`id` in this case) have excessive nesting (inputs type `list` where type `int` is expected).
+[2025-08-08 07:52:43,745: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:52:45,100: INFO: main: *******************]
+[2025-08-08 07:52:45,101: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:52:45,104: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:52:45,107: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:52:45,107: INFO: common: created directory at: artifacts]
+[2025-08-08 07:52:45,107: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:52:45,315: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:52:45,315: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:52:46,380: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:52:55,533: INFO: model_trainer: Loading dataset from artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 07:52:55,997: INFO: model_trainer: Dataset loaded successfully. Available splits: ['train', 'test', 'validation']]
+[2025-08-08 07:52:56,001: INFO: model_trainer: Removed 'id' field from train split]
+[2025-08-08 07:52:56,002: INFO: model_trainer: Removed 'id' field from test split]
+[2025-08-08 07:52:56,003: INFO: model_trainer: Removed 'id' field from validation split]
+[2025-08-08 07:52:56,011: INFO: model_trainer: Train sample keys: ['article', 'highlights', 'input_ids', 'attention_mask', 'labels']]
+[2025-08-08 07:52:56,012: INFO: model_trainer: Input IDs length: 237]
+[2025-08-08 07:52:56,012: INFO: model_trainer: Labels length: 45]
+[2025-08-08 07:52:56,556: INFO: model_trainer: Starting training...]
+[2025-08-08 07:52:56,712: ERROR: main: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`article` in this case) have excessive nesting (inputs type `list` where type `int` is expected).]
+Traceback (most recent call last):
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 776, in convert_to_tensors
+    tensor = as_tensor(value)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 738, in as_tensor
+    return torch.tensor(value)
+ValueError: too many dimensions 'str'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 46, in <module>
+    model_trainer.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/model_trainer.py", line 82, in train
+    trainer.train()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 2123, in train
+    return inner_training_loop(
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 2427, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 5045, in get_batch_samples
+    batch_samples += [next(epoch_iterator)]
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/accelerate/data_loader.py", line 550, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/data/data_collator.py", line 599, in __call__
+    batch = pad_without_fast_tokenizer_warning(
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/data/data_collator.py", line 66, in pad_without_fast_tokenizer_warning
+    padded = tokenizer.pad(*pad_args, **pad_kwargs)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 3541, in pad
+    return BatchEncoding(batch_outputs, tensor_type=return_tensors)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 240, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type, prepend_batch_axis=prepend_batch_axis)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 792, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`article` in this case) have excessive nesting (inputs type `list` where type `int` is expected).
+[2025-08-08 07:56:06,579: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:56:07,738: INFO: main: *******************]
+[2025-08-08 07:56:07,738: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 07:56:07,740: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:56:07,744: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:56:07,744: INFO: common: created directory at: artifacts]
+[2025-08-08 07:56:07,744: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 07:56:08,004: INFO: model_trainer: Using device: cuda]
+[2025-08-08 07:56:08,004: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 07:56:09,014: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 07:56:18,115: INFO: model_trainer: Loading dataset from artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 07:56:18,560: INFO: model_trainer: Dataset loaded successfully. Available splits: ['train', 'test', 'validation']]
+[2025-08-08 07:56:18,565: INFO: model_trainer: Removed 'id' field from train split]
+[2025-08-08 07:56:18,566: INFO: model_trainer: Removed 'id' field from test split]
+[2025-08-08 07:56:18,567: INFO: model_trainer: Removed 'id' field from validation split]
+[2025-08-08 07:56:18,575: INFO: model_trainer: Train sample keys: ['article', 'highlights', 'input_ids', 'attention_mask', 'labels']]
+[2025-08-08 07:56:18,575: INFO: model_trainer: Input IDs length: 237]
+[2025-08-08 07:56:18,575: INFO: model_trainer: Labels length: 45]
+[2025-08-08 07:56:19,039: INFO: model_trainer: Starting training...]
+[2025-08-08 07:56:19,192: ERROR: main: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`article` in this case) have excessive nesting (inputs type `list` where type `int` is expected).]
+Traceback (most recent call last):
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 776, in convert_to_tensors
+    tensor = as_tensor(value)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 738, in as_tensor
+    return torch.tensor(value)
+ValueError: too many dimensions 'str'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 46, in <module>
+    model_trainer.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/model_trainer.py", line 82, in train
+    trainer.train()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 2123, in train
+    return inner_training_loop(
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 2427, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/trainer.py", line 5045, in get_batch_samples
+    batch_samples += [next(epoch_iterator)]
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/accelerate/data_loader.py", line 550, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/data/data_collator.py", line 599, in __call__
+    batch = pad_without_fast_tokenizer_warning(
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/data/data_collator.py", line 66, in pad_without_fast_tokenizer_warning
+    padded = tokenizer.pad(*pad_args, **pad_kwargs)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 3541, in pad
+    return BatchEncoding(batch_outputs, tensor_type=return_tensors)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 240, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type, prepend_batch_axis=prepend_batch_axis)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 792, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`article` in this case) have excessive nesting (inputs type `list` where type `int` is expected).
+[2025-08-08 07:59:16,556: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 07:59:16,747: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 07:59:16,751: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 07:59:16,752: INFO: common: created directory at: artifacts]
+[2025-08-08 07:59:16,752: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 07:59:17,751: INFO: data_transformation: Loading dataset from artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail/cnn_dailymail]
+[2025-08-08 07:59:19,145: INFO: data_transformation: Dataset loaded successfully. Starting tokenization...]
+[2025-08-08 08:03:57,285: INFO: data_transformation: Processed dataset saved to artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 08:05:17,208: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 08:05:17,344: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:05:17,348: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:05:17,348: INFO: common: created directory at: artifacts]
+[2025-08-08 08:05:17,348: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 08:05:17,592: INFO: model_trainer: Using device: cuda]
+[2025-08-08 08:05:17,592: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 08:05:18,616: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 08:05:25,876: INFO: model_trainer: Loading dataset from artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 08:05:26,464: INFO: model_trainer: Dataset loaded successfully. Available splits: ['train', 'test', 'validation']]
+[2025-08-08 08:05:26,471: INFO: model_trainer: Removed 'id' field from train split]
+[2025-08-08 08:05:26,473: INFO: model_trainer: Removed 'id' field from test split]
+[2025-08-08 08:05:26,474: INFO: model_trainer: Removed 'id' field from validation split]
+[2025-08-08 08:05:26,484: INFO: model_trainer: Train sample keys: ['input_ids', 'attention_mask', 'labels']]
+[2025-08-08 08:05:26,484: INFO: model_trainer: Input IDs length: 1024]
+[2025-08-08 08:05:26,484: INFO: model_trainer: Labels length: 128]
+[2025-08-08 08:05:30,814: INFO: model_trainer: Starting training...]
+[2025-08-08 08:08:11,994: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 08:08:12,289: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:08:12,291: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:08:12,292: INFO: common: created directory at: artifacts]
+[2025-08-08 08:08:12,292: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 08:08:14,734: INFO: model_trainer: Using device: cuda]
+[2025-08-08 08:08:14,734: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 08:08:15,740: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 08:08:23,049: INFO: model_trainer: Loading dataset from artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 08:08:23,655: INFO: model_trainer: Dataset loaded successfully. Available splits: ['train', 'test', 'validation']]
+[2025-08-08 08:08:23,662: INFO: model_trainer: Removed 'id' field from train split]
+[2025-08-08 08:08:23,663: INFO: model_trainer: Removed 'id' field from test split]
+[2025-08-08 08:08:23,664: INFO: model_trainer: Removed 'id' field from validation split]
+[2025-08-08 08:08:23,675: INFO: model_trainer: Train sample keys: ['input_ids', 'attention_mask', 'labels']]
+[2025-08-08 08:08:23,675: INFO: model_trainer: Input IDs length: 1024]
+[2025-08-08 08:08:23,675: INFO: model_trainer: Labels length: 128]
+[2025-08-08 08:08:28,321: INFO: model_trainer: Starting training...]
+[2025-08-08 08:18:40,029: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 08:20:13,380: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 08:20:13,743: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:20:13,747: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:20:13,747: INFO: common: created directory at: artifacts]
+[2025-08-08 08:20:13,748: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 08:21:55,761: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 08:21:57,259: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-08 08:21:57,263: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:21:57,269: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:21:57,270: INFO: common: created directory at: artifacts]
+[2025-08-08 08:21:57,271: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-08 08:21:57,272: INFO: data_ingestion: File already exists of size: ~ 515370 KB]
+[2025-08-08 08:22:05,501: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-08 08:22:05,507: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-08 08:22:05,511: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:22:05,511: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:22:05,512: INFO: common: created directory at: artifacts]
+[2025-08-08 08:22:05,512: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-08 08:22:05,524: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-08 08:22:05,524: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 08:22:05,526: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:22:05,527: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:22:05,527: INFO: common: created directory at: artifacts]
+[2025-08-08 08:22:05,527: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 08:22:06,785: INFO: data_transformation: Loading dataset from artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail/cnn_dailymail]
+[2025-08-08 08:22:21,420: INFO: data_transformation: Dataset loaded successfully. Starting tokenization...]
+[2025-08-08 08:27:49,548: INFO: data_transformation: Processed dataset saved to artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 08:27:49,689: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-08 08:27:49,689: INFO: main: *******************]
+[2025-08-08 08:27:49,689: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 08:27:49,695: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:27:49,700: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:27:49,701: INFO: common: created directory at: artifacts]
+[2025-08-08 08:27:49,702: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 08:27:52,203: INFO: model_trainer: Using device: cuda]
+[2025-08-08 08:27:52,214: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 08:27:53,858: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 08:34:38,268: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 08:34:39,205: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-08 08:34:39,207: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:34:39,209: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:34:39,210: INFO: common: created directory at: artifacts]
+[2025-08-08 08:34:39,210: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-08 08:36:12,946: INFO: data_ingestion: artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail.zip download! with following info: 
+Content-Type: application/octet-stream
+X-GUploader-UploadID: ABgVH8_j0oQAApo3xc5Y3zsa5OVDKaY2x_fflOcWdZ0IQv8p9jFU0IIvadB2QgUVjbROLLKZ
+Content-Security-Policy: sandbox
+Content-Security-Policy: default-src 'none'
+Content-Security-Policy: frame-ancestors 'none'
+X-Content-Security-Policy: sandbox
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Resource-Policy: same-site
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment; filename="archive.zip"
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: false
+Access-Control-Allow-Headers: Accept, Accept-Language, Authorization, Cache-Control, Content-Disposition, Content-Encoding, Content-Language, Content-Length, Content-MD5, Content-Range, Content-Type, Date, developer-token, financial-institution-id, X-Goog-Sn-Metadata, X-Goog-Sn-PatientId, GData-Version, google-cloud-resource-prefix, linked-customer-id, login-customer-id, x-goog-request-params, Host, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, OriginToken, Pragma, Range, request-id, Slug, Transfer-Encoding, User-Agent, hotrod-board-name, hotrod-chrome-cpu-model, hotrod-chrome-processors, Want-Digest, X-Ad-Manager-Impersonation, x-chrome-connected, X-ClientDetails, X-Client-Pctx, X-Client-Version, x-debug-settings-metadata, X-Firebase-AppId, X-Firebase-AppVersion, X-Firebase-Locale, X-Goog-Firebase-Installations-Auth, X-Firebase-Client, X-Firebase-Client-Log-Type, X-Firebase-GMPID, X-Firebase-Auth-Token, X-Firebase-AppCheck, X-Firebase-Token, X-Goog-Drive-Client-Version, X-Goog-Drive-Resource-Keys, X-GData-Client, X-GData-Key, X-GoogApps-Allowed-Domains, X-Goog-AdX-Buyer-Impersonation, X-Goog-Api-Client, X-Goog-Visibilities, X-Goog-AuthUser, X-Google-EOM, x-goog-ext-124712974-jspb, x-goog-ext-467253834-jspb, x-goog-ext-353267353-bin, x-goog-ext-353267353-jspb, x-goog-ext-251363160-jspb, x-goog-ext-259736195-jspb, x-goog-ext-477772811-jspb, x-goog-ext-359275022-bin, x-goog-ext-328800237-jspb, x-goog-ext-198889211-bin, x-goog-ext-202735639-bin, x-goog-ext-223261916-bin, x-goog-ext-223435598-bin, x-goog-ext-233818517-bin, x-goog-ext-202964622-bin, X-Goog-PageId, X-Goog-Encode-Response-If-Executable, X-Goog-Correlation-Id, X-Goog-Request-Info, X-Goog-Request-Reason, X-Goog-Request-Time, X-Goog-Experiments, x-goog-iam-authority-selector, x-goog-iam-authorization-token, X-Goog-Spatula, X-Goog-Travel-Bgr, X-Goog-Travel-Settings, X-Goog-Upload-Command, X-Goog-Upload-Content-Disposition, X-Goog-Upload-Content-Length, X-Goog-Upload-Content-Type, X-Goog-Upload-File-Name, X-Goog-Upload-Header-Content-Encoding, X-Goog-Upload-Header-Content-Length, X-Goog-Upload-Header-Content-Type, X-Goog-Upload-Header-Transfer-Encoding, X-Goog-Upload-Offset, X-Goog-Upload-Protocol, x-goog-user-project, X-Goog-Visitor-Id, X-Goog-FieldMask, X-Google-Project-Override, x-goog-maps-api-salt, x-goog-maps-api-signature, x-goog-maps-client-id, X-Goog-Api-Key, x-goog-spanner-database-role, X-HTTP-Method-Override, X-JavaScript-User-Agent, X-Pan-Versionid, X-Proxied-User-IP, X-Origin, X-Referer, X-Requested-With, X-Stadia-Client-Context, X-Upload-Content-Length, X-Upload-Content-Type, X-Use-Alt-Service, X-Use-HTTP-Status-Code-Override, X-Ios-Bundle-Identifier, X-Places-Ios-Sdk, X-Android-Package, X-Android-Cert, X-Places-Android-Sdk, X-Goog-Maps-Ios-Uuid, X-Goog-Maps-Android-Uuid, X-Ariane-Xsrf-Token, X-YouTube-Bootstrap-Logged-In, X-Youtube-Client-Name, X-Youtube-Client-Version, X-YouTube-Lava-Device-Context, X-YouTube-VVT, X-YouTube-Page-CL, X-YouTube-Page-Label, X-YouTube-Page-Timestamp, X-Compass-Routing-Destination, x-framework-xsrf-token, X-Goog-Meeting-ABR, X-Goog-Meeting-Botguardid, X-Goog-Meeting-Bot-Info, X-Goog-Meeting-ClientInfo, X-Goog-Meeting-ClientVersion, X-Goog-Meeting-Debugid, X-Goog-Meeting-Identifier, X-Goog-Meeting-Interop-Cohorts, X-Goog-Meeting-Interop-Type, X-Goog-Meeting-OidcIdToken, X-Goog-Meeting-RtcClient, X-Goog-Meeting-StartSource, X-Goog-Meeting-Token, X-Goog-Meeting-Viewer-Token, X-Client-Data, x-sdm-id-token, X-Sfdc-Authorization, MIME-Version, Content-Transfer-Encoding, X-Earth-Engine-App-ID-Token, X-Earth-Engine-Computation-Profile, X-Earth-Engine-Computation-Profiling, X-Play-Console-Experiments-Override, X-Play-Console-Session-Id, x-alkali-account-key, x-alkali-application-key, x-alkali-auth-apps-namespace, x-alkali-auth-entities-namespace, x-alkali-auth-entity, x-alkali-client-locale, EES-S7E-MODE, cast-device-capabilities, X-Server-Timeout, x-foyer-client-environment, x-goog-greenenergyuserappservice-metadata, x-goog-sherlog-context, X-Server-Token, x-rfui-request-context, x-goog-nest-jwt, X-Cloud-Trace-Context, traceparent, x-goog-chat-space-id, x-goog-pan-request-context, X-AppInt-Credentials
+Access-Control-Allow-Methods: GET,HEAD,OPTIONS
+Accept-Ranges: bytes
+Content-Length: 527738644
+Last-Modified: Thu, 07 Aug 2025 12:14:23 GMT
+Date: Fri, 08 Aug 2025 08:34:40 GMT
+Expires: Fri, 08 Aug 2025 08:34:40 GMT
+Cache-Control: private, max-age=0
+X-Goog-Hash: crc32c=szy+HQ==
+Server: UploadServer
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Connection: close
+
+]
+[2025-08-08 08:36:19,610: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-08 08:36:19,610: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-08 08:36:19,613: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:36:19,614: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:36:19,615: INFO: common: created directory at: artifacts]
+[2025-08-08 08:36:19,615: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-08 08:36:19,615: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-08 08:36:19,615: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 08:36:19,616: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:36:19,618: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:36:19,618: INFO: common: created directory at: artifacts]
+[2025-08-08 08:36:19,618: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 08:36:20,693: INFO: data_transformation: Loading dataset from artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail/cnn_dailymail]
+[2025-08-08 08:36:32,627: INFO: data_transformation: Dataset loaded successfully. Starting tokenization...]
+[2025-08-08 08:40:32,090: INFO: data_transformation: Processed dataset saved to artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 08:40:32,157: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-08 08:40:32,157: INFO: main: *******************]
+[2025-08-08 08:40:32,157: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 08:40:32,160: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 08:40:32,164: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 08:40:32,165: INFO: common: created directory at: artifacts]
+[2025-08-08 08:40:32,168: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-08 08:40:32,719: INFO: model_trainer: Using device: cuda]
+[2025-08-08 08:40:32,719: INFO: model_trainer: Loading tokenizer from google/pegasus-cnn_dailymail]
+[2025-08-08 08:40:34,184: INFO: model_trainer: Loading model from google/pegasus-cnn_dailymail]
+[2025-08-08 08:40:42,971: INFO: model_trainer: Loading dataset from artifacts/data_transformation/newspaper_dataset]
+[2025-08-08 08:40:43,173: INFO: model_trainer: Dataset loaded successfully. Available splits: ['train', 'test', 'validation']]
+[2025-08-08 08:40:43,221: INFO: model_trainer: Removed 'id' field from train split]
+[2025-08-08 08:40:43,222: INFO: model_trainer: Removed 'id' field from test split]
+[2025-08-08 08:40:43,223: INFO: model_trainer: Removed 'id' field from validation split]
+[2025-08-08 08:40:43,226: INFO: model_trainer: Train sample keys (using validation set): ['input_ids', 'attention_mask', 'labels']]
+[2025-08-08 08:40:43,227: INFO: model_trainer: Input IDs length: 1024]
+[2025-08-08 08:40:43,227: INFO: model_trainer: Labels length: 128]
+[2025-08-08 08:40:43,227: INFO: model_trainer: Training on validation set (13368 samples)]
+[2025-08-08 08:40:43,227: INFO: model_trainer: Evaluating on test set (11490 samples)]
+[2025-08-08 08:40:43,767: INFO: model_trainer: Starting training...]
