@@ -415,3 +415,189 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestio
 [2025-08-07 13:37:06,187: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
 
 x==========x]
+[2025-08-08 05:58:32,511: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-08 05:58:32,514: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 05:58:32,516: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 05:58:32,517: INFO: common: created directory at: artifacts]
+[2025-08-08 05:58:32,517: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-08 05:58:32,517: INFO: data_ingestion: File already exists of size: ~ 515370 KB]
+[2025-08-08 05:58:41,391: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-08 05:58:41,391: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-08 05:58:41,392: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 05:58:41,394: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 05:58:41,394: INFO: common: created directory at: artifacts]
+[2025-08-08 05:58:41,394: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-08 05:58:41,413: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-08 06:00:47,304: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:00:47,568: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 06:00:47,570: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:00:47,572: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:00:47,572: INFO: common: created directory at: artifacts]
+[2025-08-08 06:00:47,573: ERROR: main: "'ConfigBox' object has no attribute 'data_transformation'"]
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    data_transformation.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_03_data_transformation.py", line 12, in main
+    data_transformation_config = config.get_data_transformation_config()
+  File "/home/prateek/text_summariser/src/text_summarizer/config/configuration.py", line 54, in get_data_transformation_config
+    config = self.config.data_transformation
+  File "box/config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_transformation'"
+[2025-08-08 06:06:18,009: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:06:18,232: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 06:06:18,233: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:06:18,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:06:18,236: INFO: common: created directory at: artifacts]
+[2025-08-08 06:06:18,236: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 06:06:22,666: ERROR: main: Directory artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail is neither a `Dataset` directory nor a `DatasetDict` directory.]
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    data_transformation.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_03_data_transformation.py", line 14, in main
+    data_transformation.convert()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/data_transformation.py", line 30, in convert
+    newspaper_text_summarizer = load_from_disk(self.config.data_path)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/datasets/load.py", line 2218, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2025-08-08 06:08:22,175: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:08:22,402: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 06:08:22,404: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:08:22,406: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:08:22,406: INFO: common: created directory at: artifacts]
+[2025-08-08 06:08:22,407: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 06:08:23,658: ERROR: main: Directory artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail is neither a `Dataset` directory nor a `DatasetDict` directory.]
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    data_transformation.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_03_data_transformation.py", line 14, in main
+    data_transformation.convert()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/data_transformation.py", line 30, in convert
+    newspaper_text_summarizer = load_from_disk(self.config.data_path)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/datasets/load.py", line 2218, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2025-08-08 06:09:25,831: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:09:26,086: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 06:09:26,089: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:09:26,091: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:09:26,091: INFO: common: created directory at: artifacts]
+[2025-08-08 06:09:26,091: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 06:09:27,395: ERROR: main: Directory artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail is neither a `Dataset` directory nor a `DatasetDict` directory.]
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    data_transformation.main()
+  File "/home/prateek/text_summariser/src/text_summarizer/pipeline/stage_03_data_transformation.py", line 14, in main
+    data_transformation.convert()
+  File "/home/prateek/text_summariser/src/text_summarizer/components/data_transformation.py", line 30, in convert
+    newspaper_text_summarizer = load_from_disk(self.config.data_path)
+  File "/home/prateek/miniconda3/envs/summary/lib/python3.8/site-packages/datasets/load.py", line 2218, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts/data_ingestion/newspaper-text-summarization-cnn-dailymail is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2025-08-08 06:11:29,072: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:11:29,366: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 06:11:29,368: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:11:29,370: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:11:29,371: INFO: common: created directory at: artifacts]
+[2025-08-08 06:11:29,371: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 06:15:07,166: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-08 06:16:24,773: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:16:25,040: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 06:16:25,042: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:16:25,045: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:16:25,046: INFO: common: created directory at: artifacts]
+[2025-08-08 06:16:25,046: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 06:30:25,395: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:30:25,626: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-08 06:30:25,628: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:30:25,630: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:30:25,630: INFO: common: created directory at: artifacts]
+[2025-08-08 06:30:25,630: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-08 06:30:25,631: INFO: data_ingestion: File already exists of size: ~ 515370 KB]
+[2025-08-08 06:30:33,676: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-08 06:30:33,676: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-08 06:30:33,678: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:30:33,679: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:30:33,679: INFO: common: created directory at: artifacts]
+[2025-08-08 06:30:33,679: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-08 06:30:33,679: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-08 06:30:33,679: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-08 06:30:33,681: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:30:33,681: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:30:33,681: INFO: common: created directory at: artifacts]
+[2025-08-08 06:30:33,681: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-08 06:35:08,273: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-08 06:52:39,843: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:52:40,109: INFO: main: *******************]
+[2025-08-08 06:52:40,109: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 06:52:40,109: ERROR: main: name 'ModelTrainerTrainingPipeline' is not defined]
+Traceback (most recent call last):
+  File "main.py", line 44, in <module>
+    model_trainer = ModelTrainerTrainingPipeline()
+NameError: name 'ModelTrainerTrainingPipeline' is not defined
+[2025-08-08 06:53:23,823: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:54:01,014: INFO: config: PyTorch version 2.2.0+cu121 available.]
+[2025-08-08 06:54:01,726: INFO: main: *******************]
+[2025-08-08 06:54:01,726: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-08 06:54:01,728: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-08 06:54:01,731: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-08 06:54:01,731: INFO: common: created directory at: artifacts]
+[2025-08-08 06:54:01,732: INFO: common: created directory at: artifacts/model_trainer]
